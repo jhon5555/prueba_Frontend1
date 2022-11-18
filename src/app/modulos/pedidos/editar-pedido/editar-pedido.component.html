@@ -1,0 +1,39 @@
+<div class="row">
+  <h3 class="center-align">Editar Pedidos</h3>
+  <article class="col s6 offset-s3">
+    <form [formGroup]="fgValidador" (ngSubmit)="EditarPedido()" method="POST" action="formulario-contacto.php">
+          <input type="hidden" formControlName="id"/> 
+      <div class="input-field">
+        <label for="cantidad" class="active">Cantidad</label>
+        <input formControlName="cantidad" type="text" name="cantidad" required>
+      </div>
+      <div class="input-field">
+        <label for="fechaPedido" class="active">Fecha del pedido</label>
+        <input formControlName="fechaPedido" type="date" name="fechaPedido" required>
+      </div>
+      <div class="input-field">
+        <label for="fechaEntrega" class="active">Fecha de entrega</label>
+        <input formControlName="fechaEntrega" type="date" name="fechaEntrega" required>
+      </div>
+      <div class="input-field">
+        
+        <label for="formasPago" class="active">Forma de pago</label>
+        <input formControlName="formasPago" type="text" name="formasPago" required>
+      </div>
+      <div class="input-field">
+        <label for="estado" class="active">Estado</label>
+        <input formControlName="estado" type="text" name="estado" required>
+      </div>
+      <div class="input-field">
+        <label for="total" class="active">Total</label>
+        <input formControlName="total" type="text" name="total" required>
+      </div>
+      <p class="center-align">
+        <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit">
+          <i class="material-icons right"></i>Enviar
+        </button>
+      </p>
+    </form>
+  </article>
+
+</div>

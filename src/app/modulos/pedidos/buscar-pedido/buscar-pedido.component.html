@@ -1,0 +1,60 @@
+<a routerLink="/pedidos/crear-pedido" class="btn ">Crear un pedido</a>
+<table class="table responsive">
+<thead>
+  <tr>
+  <th>
+    Cantidad
+  </th>
+  <th>
+    Fecha del Pedido
+  </th>
+  <th>
+    Fecha de Entrega
+  </th>
+  <th>
+    Forma de Pago
+  </th>
+  <th>
+    Estado
+  </th>
+  <th>
+    Total
+  </th>
+  
+  
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let p of listadoPedidos">
+    <td>
+      {{p.cantidad}}
+    </td>
+    <td>
+      {{p.fechaPedido}}
+    </td>
+    <td>
+      {{p.fechaEntrega}}
+    </td>
+    <td>
+      {{p.formasPago}}
+    </td>
+    <td>
+      {{p.estado}}
+    </td>
+    <td>
+      {{p.total}}
+    </td>
+    <td>
+      <a routerLink="/pedidos/editar-pedido/{{p.id}}" class="btn" >Editar pedido</a>
+    </td>
+    <td>
+      <a routerLink="/pedidos/eliminar-pedido/{{p.id}}" class="btn" >Eliminar pedido</a>
+    </td>
+    
+     
+    
+   
+  </tr>
+
+</tbody>
+</table>

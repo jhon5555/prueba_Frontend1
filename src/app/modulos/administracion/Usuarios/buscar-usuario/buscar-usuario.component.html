@@ -1,0 +1,70 @@
+<a routerLink="/administracion/crear-usuario" class="btn">Nuevo Usuario</a>
+
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>
+                Nombres
+            </th>
+            <th>
+                Apellidos
+            </th>
+            <th>
+                Celular
+            </th>
+            <th>
+                Cuidad
+            </th>
+            <th>
+                Correo
+            </th>
+            <th>
+                Direccion
+            </th>
+            <th>
+                Rol
+            </th>
+            <th>
+                Clave
+            </th>
+            <th>
+                Editar
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of listadoRegistros">
+            <td>
+                {{u.nombres}}
+            </td>
+            <td>
+                {{u.apellidos}}
+            </td>
+            <td>
+                {{u.celular}}
+            </td>
+            <td>
+                {{u.cuidad}}
+            </td>
+            <td>
+                {{u.correo}}
+            </td>
+            <td>
+                {{u.direccion}}
+            </td>
+            <td>
+                {{u.rol}}
+            </td>
+            <td>
+                {{u.clave}}
+            </td>
+            
+            <td>
+                <a routerLink="/administracion/editar-usuario/{{u.id}}" class="btn">Editar Usuario</a>
+            </td>
+            <td>
+                <a routerLink="/administracion/eliminar-usuario/{{u.id}}" class="btn" >Eliminar Usuario</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
