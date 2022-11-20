@@ -1,1 +1,49 @@
-<p>eliminar-usuario works!</p>
+<div class="row">
+  <h3 class="center-align">Editar Usuario</h3>
+  <article class="col s6 offset-s3">
+      <form [formGroup]="fgValidador" (ngSubmit)="EliminarUsuario()" method="POST" action="formulario-contacto.php">
+        <input type="hidden" formControlName = "id"/>
+          <div class="input-field">
+              <label for="nombres" class="active">Nombres</label>
+              <input formControlName="nombres" type="text" name="nombres" required>
+          </div>
+          <div class="input-field">
+              <label for="apellidos" class="active">Apellidos</label>
+              <input formControlName="apellidos" type="text" name="apellidos" required>
+          </div>
+
+          <div class="input-field">
+              <label for="celular" class="active">Celular</label>
+              <input formControlName="celular" type="text" name="celular" required>
+          </div>
+          <div class="input-field">
+              <label for="ciudad" class="active">ciudad</label>
+              <input formControlName="ciudad" type="text" name="ciudad" required>
+          </div>
+
+          <div class="input-field">
+              <label for="correo" class="active">Correo</label>
+              <input formControlName="correo" type="text" name="correo" required>
+          </div>
+
+          <div class="input-field">
+            <label for="direccion" class="active">Direccion</label>
+            <input formControlName="direccion" type="text" name="direccion" required>
+          </div>
+
+          <div class="input-field">
+            <label for="rol" class="active">Rol</label>
+            <input formControlName="rol" type="text" name="rol" required>
+          </div>
+          
+          <p class="center-align">
+              <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i
+                      class="material-icons right">send</i>Enviar</button>
+          </p>
+
+      </form>
+
+  </article>
+</div>
+
+

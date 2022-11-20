@@ -1,4 +1,7 @@
-<a routerLink="/administracion/crear-usuario" class="btn">Nuevo Usuario</a>
+<a routerLink="/administracion/crear-usuario" class="btn">Registrarse</a>
+
+
+
 
 <table class="table responsive">
     <thead>
@@ -13,27 +16,25 @@
                 Celular
             </th>
             <th>
-                Cuidad
+                Ciudad
             </th>
             <th>
                 Correo
             </th>
             <th>
-                Direccion
+              Direccion
             </th>
             <th>
-                Rol
+              Rol
             </th>
-            <th>
-                Clave
-            </th>
+            
             <th>
                 Editar
             </th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let u of listadoRegistros">
+        <tr *ngFor="let u of listadoRegistrosUsuarios">
             <td>
                 {{u.nombres}}
             </td>
@@ -44,27 +45,23 @@
                 {{u.celular}}
             </td>
             <td>
-                {{u.cuidad}}
+                {{u.ciudad}}
             </td>
             <td>
-                {{u.correo}}
+              {{u.correo}}
             </td>
             <td>
-                {{u.direccion}}
+              {{u.direccion}}
             </td>
             <td>
-                {{u.rol}}
-            </td>
-            <td>
-                {{u.clave}}
+              {{u.rol}}
             </td>
             
             <td>
                 <a routerLink="/administracion/editar-usuario/{{u.id}}" class="btn">Editar Usuario</a>
+                <a routerLink="/administracion/eliminar-usuario/{{u.id}}" class="btn">Eliminar Usuario</a>
             </td>
-            <td>
-                <a routerLink="/administracion/eliminar-usuario/{{u.id}}" class="btn" >Eliminar Usuario</a>
-            </td>
+
         </tr>
     </tbody>
 </table>

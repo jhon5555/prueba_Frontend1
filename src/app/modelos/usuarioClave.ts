@@ -1,5 +1,5 @@
-export  class ModeloUsuario{
-    id?: string;
+export  class ModeloUsuarioClave{
+  
     nombres?: string;
     apellidos?: string;
     celular?: string;
@@ -7,5 +7,6 @@ export  class ModeloUsuario{
     correo?: string;
     direccion?: string;
     rol?: string;
+    clave?: string;
     
 }
