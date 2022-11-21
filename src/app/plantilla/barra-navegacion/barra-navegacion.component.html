@@ -10,6 +10,7 @@
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cambio-clave">Cambiar Clave</a></li>
         <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar Sesión</a></li>
         <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/register">Registrarse</a></li>
       </ul>
     </div>
   </nav>

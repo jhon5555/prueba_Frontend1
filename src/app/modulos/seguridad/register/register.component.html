@@ -1,40 +1,40 @@
 <div class="row">
-    <h3 class="center-align">Editar Usuario</h3>
+    <h3 class="center-align">Registrarse</h3>
     <article class="col s6 offset-s3">
-        <form [formGroup]="fgValidador" (ngSubmit)="EditarUsuario()" method="POST" action="formulario-contacto.php">
-          <input type="hidden" formControlName = "id"/>
+        <form [formGroup]="fgValidador" (ngSubmit)="GuardarUsuario()" method="POST" action="formulario-contacto.php">
             <div class="input-field">
-                <label for="nombres" class="active">Nombres</label>
+                <label for="nombres">Nombres</label>
                 <input formControlName="nombres" type="text" name="nombres" required>
             </div>
             <div class="input-field">
-                <label for="apellidos" class="active">Apellidos</label>
+                <label for="apellidos">Apellidos</label>
                 <input formControlName="apellidos" type="text" name="apellidos" required>
             </div>
 
             <div class="input-field">
-                <label for="celular" class="active">Celular</label>
+                <label for="celular">Celular</label>
                 <input formControlName="celular" type="text" name="celular" required>
             </div>
             <div class="input-field">
-                <label for="ciudad" class="active">ciudad</label>
+                <label for="ciudad">ciudad</label>
                 <input formControlName="ciudad" type="text" name="ciudad" required>
             </div>
 
             <div class="input-field">
-                <label for="correo" class="active">Correo</label>
+                <label for="correo">Correo</label>
                 <input formControlName="correo" type="text" name="correo" required>
             </div>
 
             <div class="input-field">
-              <label for="direccion" class="active">Direccion</label>
+              <label for="direccion">Direccion</label>
               <input formControlName="direccion" type="text" name="direccion" required>
             </div>
 
             <div class="input-field">
-              <label for="rol" class="active">Rol</label>
+              <label for="rol">Rol</label>
               <input formControlName="rol" type="text" name="rol" required>
             </div>
+            
 
             <p class="center-align">
                 <button [disabled]="!fgValidador.valid" class="waves-effect waves-light btn" type="submit"><i

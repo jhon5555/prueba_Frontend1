@@ -1,8 +1,31 @@
-                        <div class="row">
+  <nav>
+    <div class="nav-wrapper   blue">
+      <h1 >Bienvendo al Portal Web</h1>
+
+    </div>
+  
+  </nav>
+  
+  <div class="content-all">
+    <div class="content-carrousel">
+        <figure><img src="/assets/imagenes/a.jpg"></figure>
+        <figure><img src="/assets/imagenes/b.jpg"></figure>
+        <figure><img src="/assets/imagenes/c.jpg"></figure>
+        <figure><img src="/assets/imagenes/d.webp"></figure>
+        <figure><img src="/assets/imagenes/g.jpg"></figure>
+        <figure><img src="/assets/imagenes/h.png"></figure>
+        <figure><img src="/assets/imagenes/j.webp"></figure>
+        <figure><img src="/assets/imagenes/ñ.jpg"></figure>
+        <figure><img src="/assets/imagenes/s.jpeg"></figure>
+        <figure><img src="/assets/imagenes/z.jpg"></figure>
+    </div>
+  </div>
+  <div class="row-1" >
   <div class="col s12 l4 offset-l4">
     <div class="card grey lighten-3">
       <div class="card-content">
-        <h4 class="card-title center-align">Identificación de Usuarios</h4>
+       
+        <h4 class="card-title center-align">Login</h4>
         <form [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
           <div class="row">
             <div class="input-field col s12">
@@ -22,19 +45,25 @@
             <button [disabled]="!fgValidador.valid" class="btn waves-effect waves-light" type="submit" name="action">Ingresar
               <i class="material-icons right">send</i>
             </button>
-          
+            <article>
+              <a routerLink="/seguridad/cambio-clave" class="btn" >Olvidaste tu contraseña</a>
+            </article>
           </div>
         </form>
         <form>
           
           <div>
-            <a routerLink="./administracion/crear-usuario" class="btn">Registrarse</a>
-            <a routerLink="/seguridad/cambio-clave" class="btn" >Olvidaste tu contraseña</a>
+            <a routerLink="/seguridad/register" class="btn">Registrarse</a>
+            
           </div>
+         
+          
         </form>
       </div>
+      
     </div>
   </div>
 </div>
 <br />
 <br />
+
